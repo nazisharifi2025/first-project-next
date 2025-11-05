@@ -12,7 +12,22 @@ function page() {
                 <h1 className='p-3 rounded-md bg-stone-200 text-4xl'>🍏</h1>
                 <h2 className='text-2xl'>Apple</h2>
                 <h2 className='text-2xl'>140 AF</h2>
-                <Link to="Product/Productid"></Link>
+                {/* <Link to="Product/Productid"></Link> */}
+                <a href="Product/1" className='px-3 py-1  rounded-md text-stone-300 font-bold'>Learn More..</a>
+            </div>
+            <div className='w-[200px] h-full flex flex-col bg-white justify-center items-center'>
+                <h1 className='p-3 rounded-md bg-stone-200 text-4xl'>🍌</h1>
+                <h2 className='text-2xl'>Banana</h2>
+                <h2 className='text-2xl'>160 AF</h2>
+                {/* <Link to="Product/Productid"></Link> */}
+                <a href="Product/2" className='px-3 py-1  rounded-md text-stone-300 font-bold'>Learn More..</a>
+            </div>
+            <div className='w-[200px] h-full flex flex-col bg-white justify-center items-center'>
+                <h1 className='p-3 rounded-md bg-stone-200 text-4xl'>🍊</h1>
+                <h2 className='text-2xl'>Oringe</h2>
+                <h2 className='text-2xl'>190 AF</h2>
+                {/* <Link to="Product/Productid"></Link> */}
+                <a href="Product/3" className='px-3 py-1  rounded-md text-stone-300 font-bold'>Learn More..</a>
             </div>
         </div>
     </div>
