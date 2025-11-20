@@ -1,35 +1,25 @@
 import Link from 'next/link'
-import React from 'react'
-
+export const Metadata = {
+  title: "Product Page",
+}
+const list:{id:number , name:string , price:number}[] = [
+  {id: 1 , name: "Apple",price: 230},
+  {id: 2 , name: "Oringe",price: 200},
+  {id: 3 , name: "Banana",price: 190},
+  {id: 4 , name: "Mango",price: 130},
+  {id: 5 , name: "Peach",price: 100}
+]
 function page() {
   return (
-    <div className='h-screen w-ull gap-7 flex-col flex justify-center items-center'>
-        <div className='w-[60%] h-12 bg-stone-200 flex justify-center items-center'>
-            <h1 className='text-3xl font-bold'>Product Page</h1>
+    <div  className='h-[90vh] grid grid-cols-3 p-12 justify-center gap-5 items-center'>
+      {list.map((product)=>(
+        <div key={product.id} className='p-4 rounded-md bg-gray-500  text-white'>
+          <h1  className='w-fit p-2 text-white bg-black'>{product.id}</h1>
+          <h1 className='text-4xl text-green-400 '>{product.name}</h1>
+          <h1>{product.price}</h1>
+          <Link className='bg-blue-400 text-white px-5 py-2' href={`product/order/${product.id}`}>Order Now</Link>
         </div>
-        <div className='w-[60%] h-[40vh] p-6 bg-stone-200 flex justify-center items-center gap-6 '>
-            <div className='w-[200px] h-full flex flex-col bg-white justify-center items-center'>
-                <h1 className='p-3 rounded-md bg-stone-200 text-4xl'>🍏</h1>
-                <h2 className='text-2xl'>Apple</h2>
-                <h2 className='text-2xl'>140 AF</h2>
-                {/* <Link to="Product/Productid"></Link> */}
-                <a href="Product/1" className='px-3 py-1  rounded-md text-stone-300 font-bold'>Learn More..</a>
-            </div>
-            <div className='w-[200px] h-full flex flex-col bg-white justify-center items-center'>
-                <h1 className='p-3 rounded-md bg-stone-200 text-4xl'>🍌</h1>
-                <h2 className='text-2xl'>Banana</h2>
-                <h2 className='text-2xl'>160 AF</h2>
-                {/* <Link to="Product/Productid"></Link> */}
-                <a href="Product/2" className='px-3 py-1  rounded-md text-stone-300 font-bold'>Learn More..</a>
-            </div>
-            <div className='w-[200px] h-full flex flex-col bg-white justify-center items-center'>
-                <h1 className='p-3 rounded-md bg-stone-200 text-4xl'>🍊</h1>
-                <h2 className='text-2xl'>Oringe</h2>
-                <h2 className='text-2xl'>190 AF</h2>
-                {/* <Link to="Product/Productid"></Link> */}
-                <a href="Product/3" className='px-3 py-1  rounded-md text-stone-300 font-bold'>Learn More..</a>
-            </div>
-        </div>
+      ))}
     </div>
   )
 }

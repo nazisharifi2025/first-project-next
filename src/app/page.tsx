@@ -1,7 +1,12 @@
+// app/page.tsx
+import dynamic from "next/dynamic";
+
+// const Carousel = dynamic(() => import("../components/Carousel"), { ssr: false });
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen text-5xl font-bold items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-     Home Page
-    </div>
+    <main>
+      <h1 className="text-3xl font-bold text-center my-8">صفحه اصلی</h1>
+    </main>
   );
 }
